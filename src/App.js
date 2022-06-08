@@ -1,5 +1,7 @@
 import React from "react";
-import { Formulario } from "./Elementos/Formularios";
+import { Formulario, GrupoInput, IconoValidacion, Input, Label, LeyendaError } from "./Elementos/Formularios";
+
+import { faCheckCircle } from '@fortawesome/free-solid-svg-icons'
 
 
 
@@ -9,14 +11,12 @@ function App() {
         <main>
             <Formulario action="">
                 <div>
-                    <label htmlFor="">Usuario</label>
-                    <input type="text" placeholder="Usuario"></input>
-                    <p>Lorem ipsum dolor sit amet</p>
-                </div>
-                <div>
-                    <label htmlFor="">Usuario</label>
-                    <input type="text" placeholder="Usuario"></input>
-                    <p>Lorem ipsum dolor sit amet</p>
+                    <Label htmlFor="">Usuario</Label>
+                    <GrupoInput>
+                        <Input type="text" placeholder="Usuario"></Input>
+                        <IconoValidacion icon={faCheckCircle}/>
+                    </GrupoInput>
+                    <LeyendaError>Lorem ipsum dolor sit amet</LeyendaError>
                 </div>
             </Formulario>
         </main>
