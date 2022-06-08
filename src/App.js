@@ -1,21 +1,27 @@
 import React from "react";
-import styled from 'styled-components'
+import { Formulario } from "./Elementos/Formularios";
+
+
 
 
 function App() {
     return (
         <main>
             <Formulario action="">
-                <label htmlFor="">Usuario</label>
-                <input type="text" placeholder="Usuario"></input>
-                <p>Lorem ipsum dolor sit amet</p>
+                <div>
+                    <label htmlFor="">Usuario</label>
+                    <input type="text" placeholder="Usuario"></input>
+                    <p>Lorem ipsum dolor sit amet</p>
+                </div>
+                <div>
+                    <label htmlFor="">Usuario</label>
+                    <input type="text" placeholder="Usuario"></input>
+                    <p>Lorem ipsum dolor sit amet</p>
+                </div>
             </Formulario>
         </main>
     )
 }
 
-const Formulario = styled.form`
-    background: #ccc
-`
 
 export default App;
