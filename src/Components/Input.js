@@ -2,16 +2,16 @@ import React from "react";
 import {Input, GrupoInput, IconoValidacion, Label, LeyendaError} from '../Elementos/Formularios'
 import { faCheckCircle } from '@fortawesome/free-solid-svg-icons'
 
-const ComInput = () => {
+const ComInput = ({tipo, label, placeholder, name, leyendaError, expresionRegular}) => {
     return(
 
         <div>
-            <Label htmlFor="nombre">Usuario</Label>
+            <Label htmlFor={name}>{label}</Label>
             <GrupoInput>
-                <Input type="text" placeholder="Usuario" id="nombre"></Input>
+                <Input type={tipo} placeholder={placeholder} id={name}></Input>
                 <IconoValidacion icon={faCheckCircle}/>
             </GrupoInput>
-            <LeyendaError>Lorem ipsum dolor sit amet</LeyendaError>
+            <LeyendaError>{leyendaError}</LeyendaError>
         </div>
     )
 }

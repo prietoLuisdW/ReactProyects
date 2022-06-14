@@ -10,7 +10,22 @@ function App() {
     return (
         <main>
             <Formulario action="">
-                <ComInput />
+                <ComInput
+                    tipo="text"
+                    label="Usuario"
+                    placeholder="lhprieto91"
+                    name="usuario"
+                    leyendaError="El suario debe ser de 8 a 16 caracteres, debe conterner letras y numeros, sin espacios"
+                    expresionRegular=""
+                />
+                {/* <ComInput
+                    tipo="password"
+                    label="Password"
+                    placeholder="Contraseña"
+                    name="password"
+                    leyendaError="Contraseña incorrecta"
+                    expresionRegular=""
+                /> */}
 
                 <ContenedorTerminos>
                     <Label>
