@@ -52,8 +52,8 @@ const Input = styled.input`
 const LeyendaError = styled.p`
     font-size: 12 px;
     margin-bottom: 0;
-    color: ${colores.error}
-    // displey: none;
+    color: ${colores.error};
+    display: none;
 `
 
 const IconoValidacion = styled(FontAwesomeIcon)`
@@ -62,7 +62,67 @@ const IconoValidacion = styled(FontAwesomeIcon)`
     bottom: 14px;
     z-index: 100;
     font-size: 16px;
-    // opacity: 0;
+    opacity: 0;
 `
 
-export {Formulario, Label, GrupoInput, Input, LeyendaError, IconoValidacion}
+const ContenedorTerminos = styled.div`
+    grid-column: span 2;
+    input {
+        margin-right: 10px
+    }
+`
+
+const ContenedorBotonCentrado = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    grid-column: span 2;
+`
+
+const Boton = styled.button`
+    height: 45px;
+    line-height: 45px;
+    width: 30%;
+    background: #000;
+    color: #fff;
+    font-weigth: bold;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: .1s ease all;
+    &:hover{
+        box-shadow: 3px 0px 30px rgba(163, 163, 163, 1)
+    }
+`
+
+const  MensajeExito = styled.p`
+    font-size: 14px;
+    color: ${colores.exito};
+    display: none;
+`
+const MensajeError = styled.div`
+    height: 45px;
+    line-height: 45px;
+    background-color: ${colores.error};
+    padding: 0px 15px;
+    border-radius: 3px;
+    grid-column: span 2;
+    p {
+        margin: 0px;
+    }
+    b{
+        margin-left: 10px;
+    }
+`
+
+export {Formulario, 
+    Label, 
+    GrupoInput, 
+    Input, 
+    LeyendaError, 
+    IconoValidacion, 
+    ContenedorTerminos, 
+    ContenedorBotonCentrado, 
+    Boton, 
+    MensajeExito, 
+    MensajeError}
