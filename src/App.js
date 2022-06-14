@@ -1,8 +1,8 @@
 import React from "react";
-import { Boton, ContenedorBotonCentrado, ContenedorTerminos, Formulario, GrupoInput, IconoValidacion, Input, Label, LeyendaError, MensajeError, MensajeExito } from "./Elementos/Formularios";
+import { Boton, ContenedorBotonCentrado, ContenedorTerminos, Formulario, Label, MensajeError, MensajeExito } from "./Elementos/Formularios";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCheckCircle, faExclamationTriangle } from '@fortawesome/free-solid-svg-icons'
-
+import { faExclamationTriangle } from '@fortawesome/free-solid-svg-icons'
+import ComInput from "./Components/Input";
 
 
 
@@ -10,25 +10,19 @@ function App() {
     return (
         <main>
             <Formulario action="">
-                <div>
-                    <Label htmlFor="nombre">Usuario</Label>
-                    <GrupoInput>
-                        <Input type="text" placeholder="Usuario" id="nombre"></Input>
-                        <IconoValidacion icon={faCheckCircle}/>
-                    </GrupoInput>
-                    <LeyendaError>Lorem ipsum dolor sit amet</LeyendaError>
-                </div>
+                <ComInput />
+
                 <ContenedorTerminos>
                     <Label>
                         <input type="checkbox" name="terminos" />
                         Acepto los Terminos y Condiciones
                     </Label>
                 </ContenedorTerminos>
-                <MensajeError>
+                {false && <MensajeError>
                     <p>
                         <FontAwesomeIcon icon={faExclamationTriangle}/>
                         <b>Error:</b> Por favor rellenar el formulario correctamente</p>
-                </MensajeError>
+                </MensajeError>}
                 <ContenedorBotonCentrado>
                     <Boton type="submit"> Evniar</Boton>
                     <MensajeExito>El formualrio se envio exitosamente</MensajeExito>
