@@ -12,7 +12,7 @@ const Formulario = styled.form`
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
-    @media(max-widht: 800px){
+    @media (max-width: 800px){
         grid-template-columns: 1fr;
     }
 
@@ -95,15 +95,21 @@ const IconoValidacion = styled(FontAwesomeIcon)`
 const ContenedorTerminos = styled.div`
     grid-column: span 2;
     input {
-        margin-right: 10px
+        margin-right: 10px;
+    }
+    @media (max-width: 800px){
+        grid-column: span 1;
     }
 `
 
 const ContenedorBotonCentrado = styled.div`
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    grid-column: span 2;
+	flex-direction: column;
+	align-items: center;
+	grid-column: span 2;
+	@media (max-width: 800px){
+		grid-column: span 1;
+	};
 `
 
 const Boton = styled.button`
