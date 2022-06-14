@@ -2,7 +2,7 @@ import React from "react";
 import {Input, GrupoInput, IconoValidacion, Label, LeyendaError} from '../Elementos/Formularios'
 import { faCheckCircle, faTimesCircle } from '@fortawesome/free-solid-svg-icons'
 
-const ComInput = ({estado, cambiarEstado, tipo, label, placeholder, name, leyendaError, expresionRegular}) => {
+const ComInput = ({estado, cambiarEstado, tipo, label, placeholder, name, leyendaError, expresionRegular, funcion}) => {
     
     const onChange = (e) => {
         cambiarEstado({...estado, campo: e.target.value})
@@ -14,6 +14,10 @@ const ComInput = ({estado, cambiarEstado, tipo, label, placeholder, name, leyend
             }else{
                 cambiarEstado({...estado, valido: 'false'})
             }
+        }
+
+        if(funcion){
+            funcion()
         }
     }
     
