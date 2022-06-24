@@ -1,0 +1,11 @@
+https://styled-components.com/ | Ruta para instalar Styled
+
+
+https://fontawesome.com/
+#Importar
+npm i --save @fortawesome/fontawesome-svg-core 
+npm i --save @fortawesome/free-solid-svg-icons
+npm i --save @fortawesome/react-fontawesome@latest
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome' | En el componente
+import { faExclamationTriangle } from '@fortawesome/free-solid-svg-icons' | Para cada Icono

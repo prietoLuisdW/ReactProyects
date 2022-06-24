@@ -37,6 +37,7 @@ function App() {
         }
     }
 
+    
     const onChangeTerminos = (e) => {
         setTerminos(e.target.checked)
 
